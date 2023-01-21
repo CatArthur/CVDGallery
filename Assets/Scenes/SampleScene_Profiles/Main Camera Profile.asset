@@ -16,7 +16,8 @@ MonoBehaviour:
   enabled:
     overrideState: 1
     value: 1
-  anomalies:
+  anomalyNames:
+  - Normal
   - Protanopia
   - Protanomaly
   - Deuteranopia
@@ -58,7 +59,8 @@ MonoBehaviour:
   enabled:
     overrideState: 1
     value: 1
-  anomalies:
+  anomalyNames:
+  - Normal
   - Protanopia
   - Protanomaly
   - Deuteranopia
@@ -69,4 +71,4 @@ MonoBehaviour:
   - Achromatomaly
   anomaly:
     overrideState: 1
-    value: 7
+    value: 0

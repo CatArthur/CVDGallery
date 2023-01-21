@@ -6,17 +6,22 @@ using UnityEngine.Rendering.PostProcessing;
 [PostProcess(typeof(CVDRenderer), PostProcessEvent.AfterStack, "Custom/CVD")]
 public sealed class CVD : PostProcessEffectSettings
 {
-    public String[] anomalies =
+    public String[] anomalyNames =
     {
-        "Protanopia",
-        "Protanomaly", "Deuteranopia", "Deuteranomaly", "Tritanopia", "Tritanomaly", "Achromatopsia", "Achromatomaly"
+        "Normal vision", "Protanopia", "Protanomaly", "Deuteranopia", "Deuteranomaly", "Tritanopia", "Tritanomaly", "Achromatopsia", "Achromatomaly"
     };
 
-    [Range(0, 7), Tooltip("CVD effect intensity.")]
+    private int N = 9;
+    [Range(0, 8), Tooltip("CVD effect intensity.")]
     public IntParameter anomaly = new IntParameter{value = 0};
         
     public Vector4[,] matrices =
     {
+        {
+            new (1f, 0f, 0f),
+            new (0f, 1f, 0f),
+            new (0f, 0f, 1f)
+        },
         {
             new (0.567f, 0.433f, 0.000f),
             new (0.558f, 0.442f, 0.000f),
@@ -58,6 +63,25 @@ public sealed class CVD : PostProcessEffectSettings
             new (0.163f,0.320f,0.516f)
         }
     };
+
+    public String AnomalyName()
+    {
+        return anomalyNames[anomaly];
+    }
+    
+    public void ChangeAnomaly(int newAnomaly)
+    {
+        anomaly.value = newAnomaly;
+    }
+    
+    public void NextAnomaly()
+    {
+        anomaly.value = (anomaly.value + 1) % N;
+    }
+    public void PrevAnomaly()
+    {
+        anomaly.value = (anomaly.value + N - 1) % N;
+    }
 }
 
 public sealed class CVDRenderer : PostProcessEffectRenderer<CVD>
@@ -71,7 +95,4 @@ public sealed class CVDRenderer : PostProcessEffectRenderer<CVD>
         context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
     }
 }
-
-//float3(0.567,0.433,0.000)); 
-//float3(0.558,0.442,0.000)); 
-//float3(0.000,0.242,0.758)); 
+ 
