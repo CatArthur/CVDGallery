@@ -690,8 +690,8 @@
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>C:\Users\mssiz\Unity\Colors\Colors\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:\Users\mssiz\Unity\Colors\Colors\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>C:\Users\mssiz\Unity\Colors\Colors\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
      <HintPath>C:\Users\mssiz\Unity\Colors\Colors\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
@@ -699,17 +699,11 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>C:\Users\mssiz\Unity\Colors\Colors\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\mssiz\Unity\Colors\Colors\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>C:\Users\mssiz\Unity\Colors\Colors\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
      <HintPath>C:\Users\mssiz\Unity\Colors\Colors\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\mssiz\Unity\Colors\Colors\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>C:\Users\mssiz\Unity\Colors\Colors\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
