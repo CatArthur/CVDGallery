@@ -160,8 +160,8 @@
         "userAdded": false,
         "type": "<default_scene_template_dependencies>",
         "ignore": false,
-        "defaultInstantiationMode": 1,
+        "defaultInstantiationMode": 0,
         "supportsModification": true
     },
-    "newSceneOverride": 0
+    "newSceneOverride": 1
 }

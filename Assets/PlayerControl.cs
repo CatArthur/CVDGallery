@@ -93,12 +93,12 @@ public class PlayerControl : MonoBehaviour
         }
 
         anomalyName.text = cvd.AnomalyName();
-        textColor.a = 1;
+        textColor.a = 2;
         anomalyName.color = textColor;
         if (string.Join("", seq) != key) return;
         anomalyName.text = "Despair";
-        transform.position = new Vector3(60, 1, 10);
-        textColor.a = 1;
+        transform.position = new Vector3(21.2f, 1, 9.92f);
+        textColor.a = 2;
         anomalyName.color = textColor;
     }
 }
