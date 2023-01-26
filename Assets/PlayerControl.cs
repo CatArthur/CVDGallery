@@ -10,6 +10,8 @@ public class PlayerControl : MonoBehaviour
     public Transform forward;
     public Transform right;
     public float moveSpeed = 10f;
+    public float slowSpeed;
+    public float fastSpeed;
     public float horizontalRotateSpeed = 10f;
     public float verticalRotateSpeed = 10f;
     private const float maxAngle = 70;
@@ -23,13 +25,22 @@ public class PlayerControl : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.visible = false;
         camera.GetComponent<PostProcessVolume>().profile.TryGetSettings(out cvd);
         rb = GetComponent<Rigidbody>();
+        slowSpeed = moveSpeed;
+        fastSpeed = 2 * moveSpeed;
         ChangeAnomaly(0);
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown("escape"))
+            Application.Quit();
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            moveSpeed = fastSpeed;
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+            moveSpeed = slowSpeed;
         if (Input.GetKeyDown("0"))
             ChangeAnomaly(0);
         if (Input.GetKeyDown("1"))
@@ -87,18 +98,15 @@ public class PlayerControl : MonoBehaviour
                 break;
             default:
                 cvd.ChangeAnomaly(anomaly);
-                seq.Enqueue(anomaly);
-                seq.Dequeue();
                 break;
         }
 
         anomalyName.text = cvd.AnomalyName();
-        textColor.a = 1;
+        textColor.a = 2;
         anomalyName.color = textColor;
+        seq.Enqueue(cvd.anomaly);
+        seq.Dequeue();
         if (string.Join("", seq) != key) return;
-        anomalyName.text = "Despair";
         transform.position = new Vector3(60, 1, 10);
-        textColor.a = 1;
-        anomalyName.color = textColor;
     }
 }
