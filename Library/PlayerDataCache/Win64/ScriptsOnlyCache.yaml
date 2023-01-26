@@ -20,9 +20,8 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
     - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -87,6 +86,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -94,35 +97,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2034}
+      Script: {instanceID: 2102}
     - Class: 114
-      Script: {instanceID: 2512}
+      Script: {instanceID: 2580}
     - Class: 114
-      Script: {instanceID: 2740}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 2966}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 4870}
+      Script: {instanceID: 4938}
     - Class: 114
-      Script: {instanceID: 5026}
+      Script: {instanceID: 5094}
     - Class: 114
-      Script: {instanceID: 5638}
+      Script: {instanceID: 5706}
     - Class: 114
-      Script: {instanceID: 5978}
+      Script: {instanceID: 6046}
     - Class: 114
-      Script: {instanceID: 6452}
+      Script: {instanceID: 6520}
     - Class: 114
-      Script: {instanceID: 7544}
+      Script: {instanceID: 7612}
     - Class: 114
-      Script: {instanceID: 8364}
+      Script: {instanceID: 8432}
     - Class: 114
-      Script: {instanceID: 34178}
+      Script: {instanceID: 23166}
     - Class: 114
-      Script: {instanceID: 34180}
+      Script: {instanceID: 23180}
     - Class: 114
-      Script: {instanceID: 34186}
+      Script: {instanceID: 23190}
     - Class: 114
-      Script: {instanceID: 34188}
+      Script: {instanceID: 23198}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,7 +207,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 571a394438690b2724f0781793bf7884
+      Hash: f3f7b4711917ce9e268c543c3df2fb53
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerControl
@@ -930,7 +933,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: b6e0796b976159c63b37ab49d374665d
+      Hash: b9c65561bbaa544709e315421adec9a4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CVD
@@ -943,4 +946,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "C:/Users/\u0410\u043D\u0434\u0440\u0435\u0439/Unity Projects/Gallery/Build/Colors.exe"
+  playerPath: C:/Users/mssiz/Unity/Colors/CVDGallery/Build/Colors.exe

@@ -6,9 +6,9 @@ using UnityEngine.Rendering.PostProcessing;
 [PostProcess(typeof(CVDRenderer), PostProcessEvent.AfterStack, "Custom/CVD")]
 public sealed class CVD : PostProcessEffectSettings
 {
-    public String[] anomalyNames =
+    private String[] anomalyNames =
     {
-        "Normal vision", "Protanopia", "Protanomaly", "Deuteranopia", "Deuteranomaly", "Tritanopia", "Tritanomaly", "Achromatopsia", "Achromatomaly"
+        "Нормальное зрение", "Протанопия", "Протаномалия", "Дейтеранопия", "Дейтераномалия", "Тританопия", "Тританомалия", "Ахроматопсия", "Ахроматомалия"
     };
 
     private int N = 9;
