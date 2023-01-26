@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerControl : MonoBehaviour
 {
     public Camera camera;
+    public AudioSource audio;
     public Transform forward;
     public Transform right;
     public float moveSpeed = 10f;
@@ -108,5 +109,6 @@ public class PlayerControl : MonoBehaviour
         seq.Dequeue();
         if (string.Join("", seq) != key) return;
         transform.position = new Vector3(60, 1, 10);
+        audio.Play();
     }
 }
