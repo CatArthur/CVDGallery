@@ -97,6 +97,7 @@ public class PlayerControl : MonoBehaviour
         anomalyName.color = textColor;
         if (string.Join("", seq) != key) return;
         anomalyName.text = "Despair";
+        transform.position = new Vector3(60, 1, 10);
         textColor.a = 1;
         anomalyName.color = textColor;
     }
